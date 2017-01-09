@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">AndroidJokesLibrary</string>
 
-    <string name="does_this_make_you_laugh">Does this make you laugh ??</string>
+    <string name="here_is_a_joke">Here\'s a joke!</string>
 </resources>
