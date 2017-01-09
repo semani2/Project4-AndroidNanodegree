@@ -4,7 +4,6 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.udacity.gradle.builditbigger.asynctasks.EndpointsAsyncTask;
-import com.udacity.gradle.builditbigger.ui.MainActivity;
 
 import org.junit.Assert;
 import org.junit.Rule;
@@ -13,6 +12,8 @@ import org.junit.runner.RunWith;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
+
+import ui.MainActivity;
 
 /**
  * Created by sai on 1/9/17.
