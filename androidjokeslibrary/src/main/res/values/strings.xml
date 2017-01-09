@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidJokesLibrary</string>
+
+    <string name="does_this_make_you_laugh">Does this make you laugh ??</string>
 </resources>
