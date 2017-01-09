@@ -1,16 +1,13 @@
-package com.udacity.gradle.builditbigger;
+package com.udacity.gradle.builditbigger.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.IJoker;
-import com.example.Joker;
-
-import sai.developement.androidjokeslibrary.JokeActivity;
+import com.udacity.gradle.builditbigger.R;
+import com.udacity.gradle.builditbigger.asynctasks.EndpointsAsyncTask;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -45,15 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        IJoker joker = new Joker();
-        Bundle args = new Bundle();
-        args.putString(JokeActivity.JOKE_INTENT_KEY, joker.getJoke());
-
-        Intent showJokeIntent = new Intent(this, JokeActivity.class);
-        showJokeIntent.putExtras(args);
-
-        startActivity(showJokeIntent);
-        //Toast.makeText(this, joker.getJoke(), Toast.LENGTH_LONG).show();
+        new EndpointsAsyncTask().execute(this);
     }
 
 
