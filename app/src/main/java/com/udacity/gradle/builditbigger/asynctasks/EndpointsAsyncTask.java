@@ -11,8 +11,11 @@ import com.google.api.client.extensions.android.json.AndroidJsonFactory;
 import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
 import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.io.IOException;
 
+import events.ToggleProgressDisplayEvent;
 import sai.developement.androidjokeslibrary.JokeActivity;
 
 /**
@@ -54,7 +57,8 @@ public class EndpointsAsyncTask extends AsyncTask<Activity, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+        EventBus.getDefault().post(new ToggleProgressDisplayEvent(false));
+
         Bundle args = new Bundle();
         args.putString(JokeActivity.JOKE_INTENT_KEY, result);
 
